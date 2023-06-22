@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: space-between;
+      }
+
+      .card {
+        width: 24%;
+        border: 1px solid red;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      h1{
+        text-align: center;
+      }
+      .mobile, .tablet{
+        display:none
+      }
+
+      @media (max-width: 767px) {
+        .card {
+          width: 100%;
+        }
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            color: red;
+        }
+      }
+      @media(min-width:768px) and (max-width:1024px){
+        .card {
+          width: 49%;
+        }
+        .desktop,.mobile{
+            display: none;
+        }
+
+        .tablet{
+            display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="desktop">Desktop</h1>
+    <h1 class="mobile">Mobile</h1>
+    <h1 class="tablet">Tablet</h1>
+    <div class="flex-box">
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, rem.
+        Quos eveniet natus repudiandae dignissimos nemo sapiente ad ducimus
+        omnis praesentium. Aliquid quam magni, deserunt mollitia quae dolorem
+        impedit repellendus?
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, rem.
+        Quos eveniet natus repudiandae dignissimos nemo sapiente ad ducimus
+        omnis praesentium. Aliquid quam magni, deserunt mollitia quae dolorem
+        impedit repellendus?
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, rem.
+        Quos eveniet natus repudiandae dignissimos nemo sapiente ad ducimus
+        omnis praesentium. Aliquid quam magni, deserunt mollitia quae dolorem
+        impedit repellendus?
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, rem.
+        Quos eveniet natus repudiandae dignissimos nemo sapiente ad ducimus
+        omnis praesentium. Aliquid quam magni, deserunt mollitia quae dolorem
+        impedit repellendus?
+      </div>
+    </div>
+  </body>
+</html>
